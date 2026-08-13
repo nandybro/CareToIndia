@@ -1,0 +1,5 @@
+# CareToIndia.com — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://caretoindia.com/sitemap.xml
