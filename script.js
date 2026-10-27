@@ -139,7 +139,7 @@
   const btnSubmit = document.getElementById('btn-submit');
 
   // ▶ Paste your deployed Apps Script Web App URL here:
-  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz4AYZ7e6NxLp5V7dDsD5FFgXWHL8gpCL8KpmtnpNlJ3FRQeCUFvyKZCnbZxg1dzwPXwg/exec';
+  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxOS4yYkt61qCl1u-T6iUUknF9xTeKT1_-YzqVZInELrUu8OHiPuJfsIAvZgqSVkKiEJg/exec';
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -174,7 +174,7 @@
       name,
       email,
       phone: document.getElementById('phone').value.trim(),
-      cancerType: document.getElementById('cancer-type').value,
+      treatmentType: document.getElementById('treatment-type').value,
       message: document.getElementById('message').value.trim(),
     };
 
@@ -191,8 +191,8 @@
       // ── GA4: Track form submission as a lead conversion ──────
       trackEvent('generate_lead', {
         event_category: 'Contact Form',
-        event_label: payload.cancerType || 'Not specified',
-        cancer_type: payload.cancerType || 'Not specified',
+        event_label: payload.treatmentType || 'Not specified',
+        treatment_type: payload.treatmentType || 'Not specified',
         value: 1,
         currency: 'USD',
       });
@@ -297,7 +297,7 @@
   });
 
   console.log('%c✦ CareToIndia.com', 'color: #C9923E; font-size: 20px; font-weight: bold;');
-  console.log('%cWorld-class cancer care. Built with care.', 'color: #0A7B8E; font-size: 14px;');
+  console.log('%cWorld-class medical care. Built with care.', 'color: #0A7B8E; font-size: 14px;');
 
   /* ── Google Analytics 4 — Event Tracking ───────────────────── */
 
